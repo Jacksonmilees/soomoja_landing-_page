@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Features" 
+  description="Discover Soomoja's powerful features: AI-driven product tracking, price alerts, deal recommendations, and smart shopping analytics."
+  image="/ai.jpg"
+>
+  <div class="min-h-screen relative">
+    <!-- Background -->
+    <div class="absolute top-0 left-0 w-full h-screen bg-cover bg-center -z-20" style="background-image: url('/bg.jpg')"></div>
+    <div class="absolute inset-0 bg-gray-50/80 dark:bg-black/80 -z-10"></div>
+    
+    <!-- SEO Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          Soomoja <span class="gradient-text">Features</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Save money, time, and energy with our intelligent shopping assistant powered by AI.
+        </p>
+      </div>
+      
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-robot text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">AI-Driven Product Discovery</h3>
+          <p class="text-gray-600 dark:text-gray-300">Upload an image to find similar products instantly with our advanced AI technology.</p>
+        </div>
+        
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-bell text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Real-time Price Alerts</h3>
+          <p class="text-gray-600 dark:text-gray-300">Get notified instantly when prices drop on your favorite products.</p>
+        </div>
+        
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-chart-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Price History Analytics</h3>
+          <p class="text-gray-600 dark:text-gray-300">Track price trends over time with intuitive graphs and insights.</p>
+        </div>
+        
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-tags text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Deal Recommendations</h3>
+          <p class="text-gray-600 dark:text-gray-300">Discover the best deals and discounts automatically recommended for you.</p>
+        </div>
+        
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-store text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Multi-Store Comparison</h3>
+          <p class="text-gray-600 dark:text-gray-300">Compare prices across multiple retailers to find the best offer.</p>
+        </div>
+        
+        <div class="bg-white/80 dark:bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-gray-200/50 dark:border-white/10">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-user-tag text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Personalized Experience</h3>
+          <p class="text-gray-600 dark:text-gray-300">AI learns your preferences to provide tailored shopping recommendations.</p>
+        </div>
+      </div>
+      
+      <!-- CTA -->
+      <div class="text-center">
+        <a href="/" class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-black font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">
+          <i class="fas fa-arrow-right"></i>
+          Try Soomoja Now
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+

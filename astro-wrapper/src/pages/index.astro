@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Soomoja" 
+  description="Save money, time, and energy with Soomoja's intelligent shopping assistant. AI-powered product tracking, price alerts, and deal recommendations."
+  image="/bg.jpg"
+>
+  <!-- SEO-optimized content that loads before React -->
+  <div class="min-h-screen relative">
+    <!-- Background with overlay -->
+    <div class="absolute top-0 left-0 w-full h-screen bg-cover bg-center -z-20" style="background-image: url('/bg.jpg')"></div>
+    <div class="absolute inset-0 bg-gray-50/80 dark:bg-black/80 -z-10"></div>
+    
+    <!-- Pre-load content for SEO -->
+    <div class="sr-only">
+      <h1>Soomoja - Smart Shopping Assistant</h1>
+      <p>Save money, time, and energy with our intelligent shopping assistant powered by AI.</p>
+      <h2>Features</h2>
+      <ul>
+        <li>Smart Product Tracking</li>
+        <li>Real-time Price Alerts</li>
+        <li>Price History Analytics</li>
+        <li>Deal Recommendations</li>
+        <li>AI-Driven Product Discovery</li>
+        <li>Multi-Store Comparison</li>
+      </ul>
+    </div>
+    
+    <!-- React App Container -->
+    <div id="react-app-root" class="min-h-screen">
+      <!-- Loading state -->
+      <div class="flex items-center justify-center min-h-screen">
+        <div class="text-center">
+          <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Soomoja</h1>
+          <p class="text-gray-600 dark:text-gray-300">Loading Smart Shopping Assistant...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Direct React App Embed -->
+  <script>
+    // Simple redirect to React app with fallback
+    const loadReactApp = () => {
+      try {
+        // Try to load the React app directly
+        const iframe = document.createElement('iframe');
+        iframe.src = '../index.html';
+        iframe.style.width = '100%';
+        iframe.style.height = '100vh';
+        iframe.style.border = 'none';
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.zIndex = '10';
+        
+        const container = document.getElementById('react-app-root');
+        if (container) {
+          container.innerHTML = '';
+          container.appendChild(iframe);
+        }
+      } catch (error) {
+        console.error('Failed to load React app:', error);
+        // Fallback: redirect to React app
+        window.location.href = '../index.html';
+      }
+    };
+    
+    // Load React app when page is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadReactApp);
+    } else {
+      loadReactApp();
+    }
+  </script>
+</Layout>

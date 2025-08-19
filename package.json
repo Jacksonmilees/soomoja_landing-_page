@@ -1,0 +1,26 @@
+{
+  "name": "soomoja---smart-shopping-assistant",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:astro": "cd astro-wrapper && npm run dev",
+    "dev:both": "concurrently \"npm run dev\" \"npm run dev:astro\"",
+    "build": "vite build",
+    "build:astro": "cd astro-wrapper && npm run build",
+    "build:all": "npm run build && npm run build:astro",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-dom": "^19.1.1",
+    "react": "^19.1.1",
+    "react-router-dom": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "concurrently": "^8.2.2"
+  }
+}
